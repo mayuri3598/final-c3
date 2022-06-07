@@ -3,8 +3,9 @@ import "./App.css";
 import {Navbar} from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import { Route } from "react-router-dom";
+
 import {Products} from "./components/Products"
+import { Route } from "react-router-dom";
 
 function App() {
   return (

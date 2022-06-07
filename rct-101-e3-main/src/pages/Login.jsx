@@ -33,6 +33,7 @@ const Login = () => {
         token: r.data.token
       })
     })
+    
     .catch((err) => {
       console.log(err.message)
       alert("Error");
@@ -45,21 +46,18 @@ const Login = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input data-cy="login-email"  
-        name="email"
+      <input data-cy="login-email"  name="email"
         type="text"
         placeholder="Enter Email"
         className="login_email"
         onChange={handleChange}
         />
-      <input data-cy="login-password" 
-         name="password"
-         type="text"
+      <input data-cy="login-password"  name="password" type="text"
          placeholder="Enter password"
-         className="login_password"
-         onChange={handleChange}
+         className="login_password" onChange={handleChange}
       />
-      <button data-cy="login-submit" type="submit">Login</button>
+      <button data-cy="login-submit"
+       type="submit">Login</button>
     </form>
   );
 };

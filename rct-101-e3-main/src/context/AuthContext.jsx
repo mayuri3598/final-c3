@@ -28,20 +28,19 @@ function reducer(state,action){
     case "LOGIN_FAILURE": {
         return {
           ...state,
-          isAuth: false,
+         
+   isAuth: false,
           token: null
         };
       }
       case "inc": {
         return{
-        ...state,
-        counter: state.counter + 1
+        ...state, counter: state.counter + 1
         }
       }
       case "dec": {
         return{
-          ...state,
-          counter: state.counter - 1
+          ...state, counter: state.counter - 1
           }
       }
       default: {
@@ -51,7 +50,11 @@ function reducer(state,action){
 }
 
 export const AuthProvider = ({ children }) => {
+  
+
 
   const [ state , dispatch] = useReducer(reducer , initalstate);
+
+  
   return <AuthContext.Provider value={[state,dispatch]}>{children}</AuthContext.Provider>;
 };
